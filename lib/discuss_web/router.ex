@@ -23,7 +23,7 @@ defmodule DiscussWeb.Router do
     # get "/topics/:id/edit", TopicController, :edit
     # put "/topics/:id", TopicController, :update
 
-    # resources "/", TopicController
+    resources "/", TopicController
 
     get "/", TopicController, :index
     resources "topics", TopicController, except: [:index]

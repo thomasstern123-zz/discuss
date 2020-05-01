@@ -1,12 +1,12 @@
 defmodule Discuss.Topic do
   use Ecto.Schema
 
-  import Ecto
   import Ecto.Changeset
-  import Ecto.Query
 
   schema "topics" do
     field :title, :string
+    belongs_to :user, Discuss.User
+    has_many :comments, Discuss.Comment
   end
 
   @doc false
